@@ -3,12 +3,6 @@ from pydantic import Field, SecretStr
 from .base import BASE_DIRECTORY, AdvancedBaseSettings
 
 
-__all__ = [
-    "ServiceDatabaseSettings",
-    "service_database_settings",
-]
-
-
 class ServiceDatabaseSettings(AdvancedBaseSettings):
     """
     Этим именем мы явно даём понять, что данная база является для сервиса основной.

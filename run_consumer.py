@@ -1,6 +1,7 @@
 from pprint import pprint
 
-from app.settings import event_broker_settings, service_database_settings
+from app.settings.db import service_database_settings
+from app.settings.mq import event_broker_settings
 
 
 if __name__ == "__main__":

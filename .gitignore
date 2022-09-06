@@ -1,5 +1,6 @@
 .DS_Store/
 .idea/
+.pythonenv/
 secrets/
 
 # Byte-compiled / optimized / DLL files

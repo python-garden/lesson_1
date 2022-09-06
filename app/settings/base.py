@@ -3,12 +3,6 @@ from pathlib import Path
 from pydantic import BaseSettings
 
 
-__all__ = [
-    "BASE_DIRECTORY",
-    "AdvancedBaseSettings",
-]
-
-
 BASE_DIRECTORY = Path(__file__).absolute().parent.parent.parent
 
 

@@ -3,12 +3,6 @@ from pydantic import Field, SecretStr
 from .base import BASE_DIRECTORY, AdvancedBaseSettings
 
 
-__all__ = [
-    "EventBrokerSettings",
-    "event_broker_settings",
-]
-
-
 class EventBrokerSettings(AdvancedBaseSettings):
     # Здесь имя говорит о наличии событий и некоем посреднике (брокере).
     # В данном случае любой мало-мальски опытный разработчик поймёт,
