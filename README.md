@@ -7,9 +7,10 @@
 - создай виртуальное окружение: `python3 -m venv .pythonenv/`;
 - активируй его: `source .pythonenv/bin/activate`;
 - инсталлируй «змеиные» пакеты: `pip install -r requirements`;
-- далее добавь нужные переменные окружения: `export SERVICE_DB_HOST="0.0.0.0"`;
+- далее добавь нужные переменные окружения: `export SERVICE_DB_HOST="0.0.0.0"` 
+(см. раздел «Список переменных окружения»);
 - проделай действия из раздела «Обязательные действия перед запуском»;
-- запусти один из раннеров.
+- запусти один из раннеров (см. раздел «Точки входа»).
 
 
 ## Обязательные действия перед запуском
@@ -24,3 +25,25 @@
 Проект имеет две точки входа:
 - run_api — запуск апишки, по корневому URL которой (http://127.0.0.1:8000/) можно увидеть энвы БД;
 - run_consumer — якобы запуск консьюмера, но на самом деле просто печать энвов БД и MQ.
+
+
+## Список переменных окружения
+
+### API
+
+- SERVICE_DB_HOST (example: 0.0.0.0);
+- SERVICE_DB_NAME (example: service_db);
+- SERVICE_DB_USERNAME (example: db_user);
+- SERVICE_DB_PORT (example: 5432, default: 5432).
+
+
+### Consumer
+
+- SERVICE_DB_HOST (example: 0.0.0.0);
+- SERVICE_DB_USERNAME (example: db_user);
+- SERVICE_DB_NAME (example: service_db);
+- SERVICE_DB_PORT (example: 5432, default: 5432);
+- EVENT_BROKER_HOST (example: 0.0.0.0);
+- EVENT_BROKER_USERNAME (example: mq_user);
+- EVENT_BROKER_PORT (example: 5672, default: 5672).
+- EVENT_BROKER_VHOST (example: core, default: /);
