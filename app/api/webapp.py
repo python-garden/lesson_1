@@ -5,10 +5,8 @@ from fastapi import FastAPI
 from app.settings.db import service_database_settings
 
 
-app = FastAPI(
-    title="Lesson 1",
-    description="Test FastApi application for Python Garden",
-)
+app = FastAPI(title="Lesson 1", 
+              description="Test FastApi application for Python Garden", )
 
 
 @app.get("/")
